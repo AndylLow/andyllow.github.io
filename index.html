@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en" class="k-ff k-ff123"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İstanbul Üniversitesi Akademik Kayıt Sistemi - Aksis">
+    <meta name="author" content="İstanbul Üniversitesi Bilgi İşlem Daire Başkanlığı">
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+    <meta http-equiv="pragma" content="no-cache">
+    <!-- <link href="assets/less/styles.less" rel="stylesheet/less" media="all">  -->
+
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+    <meta http-equiv="pragma" content="no-cache">
+
+
+    <!-- for Toastr notifications  -->
+    <link href="Ozluk_dosyalar/styles.css" rel="stylesheet">
+    <link href="Ozluk_dosyalar/master_styles.css" rel="stylesheet">
+
+
+    <style>
+        #atlwdg-trigger {
+            margin-right: 60px;
+        }
+
+        .dropdown-menu.userinfo {
+            width: 500px !important;
+        }
+    </style>
+    <link href="Ozluk_dosyalar/css.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries. Placeholdr.js enables the placeholder attribute -->
+    <!--[if lt IE 9]>
+       <link href="/assets/css/ie8.css?v=EFgrkw7IV45ju_uazeezdjAytyxHUiYMImsV_SyTMNY1" rel="stylesheet"/>
+
+        <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+
+    <![endif]-->
+    <!-- The following CSS are included as plugins and can be removed if unused-->
+    <!-- Plugin Css dosyaları Başla -->
+    <!-- assets/plugins/ klasöründeki eklentilerin css dosyaları burada yüklenecek -->
+    
+    <link href="Ozluk_dosyalar/OBSgeneratedCSS.css" rel="stylesheet">
+    
+    <script async="" src="Ozluk_dosyalar/analytics.js"></script><script src="Ozluk_dosyalar/jquery-1.10.2.min.js"></script>
+
+
+    <link href="Ozluk_dosyalar/toastr.min_002.css" rel="stylesheet">
+    <!-- Plugin Css dosyaları Bit -->
+    <script src="Ozluk_dosyalar/toastr.min.js"></script>
+    <script src="Ozluk_dosyalar/jquery.maskedinput.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Ozluk_dosyalar/multi-select.css">
+
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0,0,0,0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+
+    <link href="Ozluk_dosyalar/toastr.min.css" rel="stylesheet">
+    <script src="Ozluk_dosyalar/toastr.min_002.js"></script>
+
+    <script src="Ozluk_dosyalar/jquery.maskedinput.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Ozluk_dosyalar/multi-select.css">
+
+    
+
+
+
+    <script type="text/javascript" src="Ozluk_dosyalar/jquery.cookie.js"></script>
+    <script type="text/javascript" src="Ozluk_dosyalar/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="Ozluk_dosyalar/prettify.js"></script>
+    <script type="text/javascript" src="Ozluk_dosyalar/toggle.min.js"></script>
+    <script type="text/javascript" src="Ozluk_dosyalar/jquery.knob.min.js"></script>
+    <script type="text/javascript" src="Ozluk_dosyalar/skylo.js"></script>
+    <script type="text/javascript" src="Ozluk_dosyalar/demo-slider.js"></script>
+    <script type="text/javascript" src="Ozluk_dosyalar/demo.js"></script>
+
+
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+    <body>
+
+
+        
+
+        <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+
+            <a id="leftmenu-trigger" class="tooltips" data-toggle="tooltip" data-placement="right" title="" data-original-title="Menü Aç/Kapat"></a>
+
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" href="http://aksis.istanbul.edu.tr/" style="background: url(&quot;/Content/img/logo_1.png&quot;) center center / auto 20px no-repeat;"></a>
+            </div>
+            <div class="pull-left logo-yani-yazisi">
+                
+            </div>
+            <style>
+    .simulationArea {
+        padding-left: 20px;
+        color: white;
+        margin-top: 1px;
+        padding-top: 2px;
+        width: 400px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+
+        if ($("#arama").length) {
+            $("#arama").select2({
+                placeholder: '"Simulasyon için Öğrenci Seçiniz"',
+                minimumInputLength: 3,
+                quietMillis: 1000,
+                multiple: false,
+                closeOnSelect: true,
+                formatResult: tcNoFormatResult,
+                formatSelection: tcNoFormat,
+                ajax: {
+                    url: '/Data/AraKullaniciUniversal',
+                    type: "POST",
+                    dataType: 'json',
+                    quietMillis: 650,
+                    data: function (term) {
+                        return {
+                            aranacak: term,
+                            kapaliBirimlerGelsinMi: false
+                        };
+                    },
+                    results: function (data) {
+                        var tmp = new Array();
+                        $.each(data, function (i, item) {
+                            var mezun = '';
+                            if (item.EnumStatu == '15' || item.EnumStatu == '16') //mezun ve mezun önlisans
+                                mezun = '<i class="fa fa-graduation-cap pull-right" title="Mezun veya Mezun Önlisans Statüsünde"></i>';
+                            else if (item.EnumStatu == '2' || item.EnumStatu == '6' || item.EnumStatu == '8') //2: kayıt dondurmuş 6:kayıt silindi 8:ayrıldı
+                                mezun = '<i class="fa fa-chain-broken pull-right" title="Kayıt Dondurmuş, Kayıt Silinmiş veya Ayrılmış Statüsünde"></i> ';
+                            else if (item.EnumStatu == '10') //2: kayıt dondurmuş 6:kayıt silindi 8:ayrıldı
+                                mezun = '<i class="fa fa-mouse-pointer pull-right" title="Online Kayıtlı"></i> ';
+                            else if (item.EnumStatu == '3') //2: kayıt dondurmuş 6:kayıt silindi 8:ayrıldı
+                                mezun = '<i class="fa fa-exchange pull-right" title="Değişim Programında"></i> ';
+                            else if (item.EnumStatu == '9') //2: kayıt dondurmuş 6:kayıt silindi 8:ayrıldı
+                                mezun = '<i class="fa fa-gavel pull-right" title="Disiplin Cezası Aldı"></i> ';
+
+                            var kimlikNo = item.Kisi.TC;
+                            if (kimlikNo == null || kimlikNo == '')
+                                kimlikNo = item.Kisi.YabanciUyrukluNo;
+                            if (kimlikNo == null || kimlikNo == '')
+                                kimlikNo = item.Kisi.YokNo;
+                            if (kimlikNo == null || kimlikNo == '')
+                                kimlikNo = item.Kisi.PasaportNo;
+                            tmp.push({ id: item.ID, text: item.Kisi.Ad + ' ' + item.Kisi.Soyad, ogrenciNo: item.Numara, arsiv: mezun, birimAdi: item.Birimler.BirimAdi, tc: kimlikNo, statu: item.EnumStatuAciklama });
+                        });
+                        return { results: tmp };
+                    }
+                }
+            });
+        }
+    });
+
+    function EndSim() {
+        var sessionAyarla = $.post('/Home/SimulasyonBitir');
+        sessionAyarla.done(function (data2) {
+            if (data2.IsSuccess) {
+                window.location.href = '/Home/Index';
+
+            } else {
+                alert(data2.Message);
+            }
+        }).fail(function (data) {
+            alert(data.Message);
+        });
+    }
+
+    function tcNoFormatResult(ogrenci) {
+        //var arsiv = "";
+        //if (ogrenci.arsiv == 1) {
+        //    arsiv = '<span class="pull-right"><i class="fa fa-folder-o">';
+        //}
+
+
+        var result = '<div><div class="search_result"><div class="clear"><span class="search_result_ad"><b>' + ogrenci.text + '</b> | NO: ' + ogrenci.ogrenciNo + ' | TC: ' + ogrenci.tc + ' | STATÜ: ' + ogrenci.statu + ogrenci.arsiv + '<br /><p style="font-size:11px;opacity:0.5;">' + ogrenci.birimAdi + '</p></div></div></div>'
+
+        return result;
+    }
+
+    function tcNoFormat(ogrenci) {
+        var sessionAyarla = $.post('/Home/SimulasyonBaslat', { ogrenciTC: ogrenci.tc });
+        sessionAyarla.done(function (data2) {
+            if (data2.IsSuccess) {
+                window.location.href = '/Home/Index';
+
+            } else {
+                alert(data2.Message);
+            }
+        }).fail(function (data) {
+            alert(data.Message);
+        });
+        return ogrenci.text;
+    }
+</script>
+
+            
+            <ul class="nav navbar-nav pull-right toolbar">
+                <li class="dropdown">
+                        <a href="#" class="dropdown-toggle username" data-toggle="dropdown">
+                            <span class="hidden-xs">DİLA AKYOL <i class="fa fa-caret-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu userinfo arrow">
+                            <li class="userlinks">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="profileImage" style="width: 100%;" src="Ozluk_dosyalar/5cNzzPAXXr6dlhfKjgOR4uEBm5_q1V2wHQoZAL7A7UP9gm+lvRykQQ==.jpg" alt="">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <table class="table">
+                                            <tbody><tr>
+                                                <th style="width: 110px;">Numara</th>
+                                                <td>1205210063</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Ad Soyad</th>
+                                                <td>DİLA AKYOL</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Program</th>
+                                                <td>SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Danışman</th>
+                                                <td>Doç. Dr. HAKAN GÜNEŞ</td>
+                                            </tr>
+
+                                        </tbody></table>
+                                    </div>
+                                </div>
+
+                                <ul class="dropdown-menu">
+                                    <li style="text-align: center;"><a href="https://obs.istanbul.edu.tr/Home/Logout">Oturumu Kapat <i class="fa fa-sign-out"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                </li>
+
+                <li class="dropdown">
+    <a href="#" class="hasnotifications dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-comments-o"></i>
+
+            <span class="badge">6</span>
+
+    </a>
+    <ul class="dropdown-menu messages arrow">
+
+            <li class="dd-header">
+                <span>6 yeni mesajınız var.</span>
+                
+            </li>
+
+
+
+
+
+                    <li>
+                        <a href="https://obs.istanbul.edu.tr/genel/chat2?cid=RQEB3HJxfMM%3d" class="active">
+                            
+                            <img src="Ozluk_dosyalar/s9GTAYdj9yePiR3BZx2FRrCMf2FBuGWZG+3WjAV+VI79gm+lvRykQQ==.jpg" alt="avatar">
+                            <div><span class="name">SAADET GÜLDEN AYMAN</span><span class="msg">Merhaba Arkadaşlar
+Önümüzdeki hafta için lütf...</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://obs.istanbul.edu.tr/genel/chat2?cid=dQobBmxJudE%3d" class="active">
+                            
+                            <img src="Ozluk_dosyalar/HNtN5MD6kvRY+60IJqkD1xm4EWpix14+97APKv+fkQL9gm+lvRykQQ==.jpg" alt="avatar">
+                            <div><span class="name">AHMET BEKMEN</span><span class="msg">dersin okumalarını OYS sistemine yükledim, or...</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://obs.istanbul.edu.tr/genel/chat2?cid=nWgwe%2bEKaeM%3d" class="active">
+                            
+                            <img src="Ozluk_dosyalar/CQdBfyl5cyObSqUOXfJ7u9uS704L603YGweS4+x0+bj9gm+lvRykQQ==.jpg" alt="avatar">
+                            <div><span class="name">MEHTAP KAYĞUSUZ</span><span class="msg">Merhaba Arkadaşlar, az sonra bütünleme sınav ...</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://obs.istanbul.edu.tr/genel/chat2?cid=QAPdfoPMHik%3d" class="active">
+                            
+                            <img src="Ozluk_dosyalar/2vnnjNxVOcSwGG7povKKsozvy6ZgtvCsWEppN0cp1iT9gm+lvRykQQ==.jpg" alt="avatar">
+                            <div><span class="name">ERTAN EROL</span><span class="msg">Dear all, I have uploaded a short article tit...</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://obs.istanbul.edu.tr/genel/chat2?cid=l%2bLOObuZ%2fk4%3d" class="active">
+                            
+                            <img src="Ozluk_dosyalar/BHjA3Z4ioxoD4RYSDBnf5u1_JWJE2k1g_ybkrMaYbx39gm+lvRykQQ==.jpg" alt="avatar">
+                            <div><span class="name">ŞENNUR KAYA</span><span class="msg">BÜTÜNLEME ÖDEVİ DÖKÜMANLAR/EĞİTİM MATERYALLER...</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://obs.istanbul.edu.tr/genel/chat2?cid=oOycefYpY14%3d" class="active">
+                            
+                            <img src="Ozluk_dosyalar/szyOJTsf6UQSP7EDZvJ6TTDDaEAd7uyOuhfbKEJpdXf9gm+lvRykQQ==.jpg" alt="avatar">
+                            <div><span class="name">ESMA GÜLTÜVİN GÜR OMAY</span><span class="msg">sınav öncesinde de farkettiğiniz gibi sistemd...</span></div>
+                        </a>
+                    </li>
+            
+ 
+        <li class="dd-footer"><a href="https://obs.istanbul.edu.tr/Genel/Chat2">Tümünü Gör</a></li>
+    </ul>
+</li>
+            </ul>
+        </header>
+        <div id="page-container">
+            <!-- Menu Partial Buraya Gelecek -->
+            <!-- BEGIN SIDEBAR -->
+<nav id="page-leftbar" role="navigation">
+    <!-- BEGIN SIDEBAR MENU -->
+    <script type="text/javascript">
+    var lang_array = new Array();
+
+    lang_array["tr"] = [];
+    lang_array["tr"]["anasayfa"] = "OASIS Ana Sayfa";
+    lang_array["tr"]["site_yonetimi"] = "Site Yönetmi";
+
+    lang_array["en"] = [];
+    lang_array["en"]["anasayfa"] = "OASIS Home Page";
+    lang_array["en"]["site_yonetimi"] = "Site Administrator";
+
+</script>
+<ul class="acc-menu" id="sidebar">
+    <li title="İstanbul Üniversitesinde, birden fazla Birimde öğrenciliğiniz mevcut ise; İşlem yapmak istediğiniz Birimi “Seç” butonuna tıklayarak seçmeniz gerekmektedir. "><a href="https://obs.istanbul.edu.tr/"><i class="fa fa-home"></i>Ana Sayfa</a></li>
+    <li class="divider"></li>
+    <li>
+        <a id="" class="" href="https://obs.istanbul.edu.tr/Belge/BelgeTalep" title="Belge Taleplerinizi bu ekran üzerinden yapabilirsiniz. Talep ettiğiniz belgeler, Fakülteniz Öğrenci İşleri Bürosu tarafından onaylanmaktadır. Onaylanma süreci ile ilgi Öğrenci İşlerinizden bilgi alabilirsiniz."><i class="fa fa-file"></i><span>Belge Talepleri</span></a>
+    </li>
+    <li class="active">
+        <a id="" class="" href="https://obs.istanbul.edu.tr/Profil/Ozluk" title="Özlük ve Birim bilgilerinizi  “Özlük Bilgileri” ekranı üzerinden kontrol edebilir , yeni iletişim bilgisi ekleyebilirsiniz. Eksik ya da hatalı bilgi durumunda Fakülteniz Öğrenci İşleri Bürosu ile irtibata geçiniz. "><i class="fa fa-user"></i><span>Özlük Bilgileri</span></a>
+    </li>
+    <li>
+        <a id="" class="" href="https://obs.istanbul.edu.tr/Profil/HarcBilgileri" title="Harç Ödemesi için Referans Numaranızı “Harç Bilgileri” ekranından öğrenebilirsiniz. Harç ödemeleri Referans Numarası ile yapılmaktadır. Referans Numaranız ile Halkbank şube ve ATM’lerinden ödeme yapabilirsiniz."><i class="fa fa-money"></i><span>Harç Bilgileri <br> Tuition Information</span></a>
+    </li>
+    <li>
+        <a id="" class="" href="https://obs.istanbul.edu.tr/DersAlma/DersAlma" title="Ders Alma işlemleri bu ekran üzerinden yapılmaktadır. (Akademik Takvimde belirtilen ders alma tarihleri dışında ekran kapalı olacaktır.)"><i class="fa fa-book"></i><span>DersAlma</span></a>
+    </li>
+    <li>
+        <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/DersProgramiYeni/Index" title="Ders Programınızı bu ekran üzerinden görüntüleyebilirsiniz. Ders Programı Bilgileriniz Fakülteniz Öğrenci İşleri Bürosu tarafından işlenmektedir. Eğer Ders Programınız boş ya da eksik geliyorsa Fakülteniz Öğrenci İşleri Bürosu ile irtibata geçiniz."><i class="fa fa-list-ul"></i><span>Ders Programı</span></a>
+    </li>
+    <li>
+        <a id="" class="" href="https://obs.istanbul.edu.tr/Dokuman/Dokuman/Index" title="Dersi Veren Öğretim Üyesi tarafından eklenen Ödevlere bu ekrandan ulaşabilirsiniz. "><i class="fa fa-file"></i><span>Doküman Paylaşımı</span></a>
+    </li>
+    <li>
+        <a id="" class="" href="https://obs.istanbul.edu.tr/TezBasvuru/TezBasvuru/index" title=""><i class="fa fa-file"></i><span>Online Tez Savunma</span></a>
+    </li>
+    <li>
+        <a id="" class="" href="https://obs.istanbul.edu.tr/ITFDanismanlik/ITFDanismanlik/Index"><i class="fa fa-list-ul"></i><span>Danışmanlık Formu</span></a>
+    </li>
+    <li class="hasChild">
+        <a id="" class="" href="javascript:;" title="Öğreniminiz ile ilgili detaylı tüm bilgiler “Öğrenim Bilgileri” menüsü altında yer alan ekranlarda gösterilmektedir."><i class="fa fa-book"></i><span>Öğrenim Bilgileri</span></a>
+        <ul class="acc-menu" style="display: none;">
+            <li> <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/DonemDersleriVeSinavlari/Index" title="Aldığınız Dersleri, Ders Onay Durumunuzu ve Sınav Tarihlerini bu ekran üzerinde görüntüleyebilirsiniz. Sınav bilgileri ve tarihleri, Dersi Veren Öğretim Üyesi tarafından Sınav Döneminde sisteme işlenmektedir. "><span>Dönem Dersleri ve Sınavları</span></a></li>
+            <li> <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/SinavSonuclariVeNotlar/Index" title="Sınav Sonuç bilgilerinizi bu ekran üzerinden görüntüleyebilirsiniz. Sınav  Bilgileri ve  Sınav Sonuçları; Dersi veren Öğretim Üyesi tarafından, Sınav Döneminde sisteme işlenmektedir. Sınav Sonuçlarının açıklanma süreci ile ilgili olarak Dersi Veren Öğretim Üyesi ile irtibata geçiniz."><span>Sınav Sonuçları ve Notlar</span></a></li>
+            <li> <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/NotKarti/Index"><span>Not Kartı</span></a></li>
+            <li> <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/DersAlmaListesi/Index" title="Ders Alma Listenizi bu ekrandan alabilirsiniz.  Yıl Bilgisini girip(2018, 2017… vb.)  Dönem bilgisini seçtikten sonra Yeşil renkte gösterilen  PDF butonuna tıklayarak Ders Alma Listenizi bilgisayarınıza indirebilirsiniz."><span>Ders Alma Listesi</span></a></li>
+                <li> <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/MufredatListesi/Index" title=" Biriminize ait tüm dersleri bu ekrandan görüntüleyebilirsiniz. Sağ üst köşede yer alan “Müfredat Ders Listesi” alanına tıkladığınızda “Eğitim Bilgi Sistemine (EBS) bağlanıp Birimize ait tüm ders listesi ile birlikte ders içeriklerine de ulaşabilirsiniz. "><span>Müfredat Listesi</span></a></li>
+            <li> <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/DanismanTezProjeYeterlilikBilgileri/Index" title="Yüksek Lisans ve Doktora Öğrencileri Danışman, Tez, Proje Yeterlilik bilgileri ile ilgili tüm detayları bu ekrandan görüntüleyebilirler."><span>Danışman, Tez, Proje Yeterlilik Bilgileri</span></a></li>
+            <li> <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/SinavItiraz/Index" title="Online Sınav İtirazı Kullanan Fakültelerin öğrencileri bu ekrandan Sınav İtiraz İşlemlerini gerçekleştirebilmektedir.  "><span>Sınav İtiraz</span></a></li>
+            <li> <a id="" class="" href="https://obs.istanbul.edu.tr/OgrenimBilgileri/OzelKazanim/Index" title=""><span>Özel Kazanım</span></a></li>
+            
+            
+            <li> <a id="" class="" href="https://obs.istanbul.edu.tr/KayitDondurma/KayitDondurma/Index" title=""><span>Talep İşlemleri</span></a></li>
+            
+        </ul>
+    </li>
+
+    <li class="hasChild">
+        
+        <ul class="acc-menu" style="display: none;">
+            <li class="hasChild">
+                
+                <ul class="acc-menu" style="display: none;">
+                    <li> </li>
+                    <li> </li>
+                </ul>
+            </li>
+            <li class="hasChild">
+                
+                <ul class="acc-menu" style="display: none;">
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                </ul>
+            </li>
+            
+            <li> </li>
+        </ul>
+    </li>
+
+    <li>
+        <a id="" class="" href="https://obs.istanbul.edu.tr/StajKarnesi/StajKarti" title=""><i class="fa fa-file"></i><span>Beceri Karnesi</span></a>
+    </li>
+
+    <li><a id="" class="" href="https://obs.istanbul.edu.tr/Genel/Chat2" title=" Ders Danışmanınız ile bu ekran üzerinden yazışabilirsiniz. Ders Seçimi, Ders Onayı ve benzeri talep ve sorunlarınızı bildirebilir, gerekli bilgileri kendisinden alabilirsiniz."><i class="fa fa-comments"></i><span>Yazışmalarım</span></a></li>
+    
+
+    <li><a id="" class="" href="https://obs.istanbul.edu.tr/OgrenciKulturMerkezi/Kulup/Kulupler" title="Öğrenci Kulüpleri"><i class="fa fa-play"></i><span>Öğrenci Kulüpleri</span></a></li>
+    <li><a id="" class="" href="https://obs.istanbul.edu.tr/SSS/SSS/Index" title="SSS"><i class="fa fa-comments"></i><span>SSS</span></a></li>
+    <li><a id="" class="" href="https://obs.istanbul.edu.tr/EEgitim/EEgitim/Index/2" title="Afet Farkındalık Eğitimi"><i class="fa fa-play"></i><span>Afet Farkındalık Eğitimi</span></a></li>
+</ul>
+
+    <!-- END SIDEBAR MENU -->
+</nav>
+
+            <div id="page-content" style="min-height: 863px;">
+                <div id="wrap">
+                    
+
+                    <div id="page-heading">
+                        
+
+                        <h1></h1>
+                    </div>
+                    <div class="container">
+                        <!-- Sayfa İçeriğinin Başla -->
+                        <!-- Pines Notify Gelecek -->
+                        
+                        
+
+                        
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>Özlük Bilgileri</h4>
+    <div class="options">
+        <a class="panel-collapse" href="#">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+    <div class="panel-body">
+
+
+<style type="text/css">
+    .modal.modal-wide .modal-dialog {
+        width: 75%;
+    }
+</style>
+<div class="row">
+    <script>
+$(document).ready(function(){
+	$('.validate-form').parsley({
+        successClass: 'has-success',
+        errorClass: 'has-error',
+        errors: {
+            classHandler: function(el) {
+                return $(el).closest('.form-group');
+            },
+            errorsWrapper: '<ul class=\"help-block list-unstyled\"></ul>',
+            errorElem: '<li></li>'
+        }
+    });
+});
+</script>
+
+<form action="" method="post" class="form-horizontal validate-form  " style="" data-ajaxcallback="Yoo" enctype="multipart/form-data">
+    <div class="modal modal-wide fade" id="uploadFoto" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Fotoğraf Yükle</h4>
+                </div>
+                <div class="modal-body form-horizontal">
+                    <iframe id="frm_upload" src="https://cdn0.istanbul.edu.tr/Photo.aspx?app=678EFB0041F34574B9C9A196A9DD936E&amp;i=5cNzzPAXXr6dlhfKjgOR4uEBm5%2fq1V2wHQoZAL7A7UP9gm%2blvRykQQ%3d%3d&amp;t=1" style=" width:100%; height:490px; border:0px; overflow hidden;" scrolling="yes"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-midnightblue">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <img src="Ozluk_dosyalar/5cNzzPAXXr6dlhfKjgOR4uEBm5_q1V2wHQoZAL7A7UP9gm+lvRykQQ==.jpg" width="120">
+
+
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row row-gapped">
+                            <div class="col-md-6">
+
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Adı:</label>
+                                        <span class="info-input">Recep Ertuğrul</span>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Soyadı:</label>
+                                        <span class="info-input">Ekşi</span>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Kimlik Numarası:</label>
+                                        <span class="info-input">
+                                            12167512364
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Baba Adı:</label>
+                                        <span class="info-input">TUĞRUL</span>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Anne Adı:</label>
+                                        <span class="info-input">DİLEK</span>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Din:</label>
+                                        <span class="info-input"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="row row-gapped">
+
+                            <div class="col-md-6">
+
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Doğum Tarihi:</label>
+                                        <span class="info-input">16.07.2002</span>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Doğum Yeri:</label>
+                                        <span class="info-input">ÜSKÜDAR</span>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Medeni Hal:</label>
+                                        <span class="info-input">Belirsiz</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Uyruk:</label>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Kan Grubu:</label>
+                                        <span class="info-input"></span>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label class="label-main">Cinsiyet:</label>
+                                        <span class="info-input">Erkek</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">İl:</label>
+                                <span class="info-input">Rize</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">İlçe:</label>
+                                <span class="info-input">İkizdere</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Mahalle/Köy:</label>
+                                <span class="info-input"></span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Cilt No:</label>
+                                <span class="info-input">-</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col-md-6">
+
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label class="label-main">Aile Sıra No:</label>
+                                    <span class="info-input">348</span>
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label class="label-main">Seri No</label>
+                                    <span class="info-input"> </span>
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label class="label-main">Kayıt No:</label>
+                                    <span class="info-input">0</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label class="label-main">Veriliş Nedeni:</label>
+                                    <span class="info-input"></span>
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label class="label-main">Veriliş Tarihi:</label>
+                                    <span class="info-input"></span>
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label class="label-main">Verildiği Yer:</label>
+                                    <span class="info-input"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div></div>
+
+
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>Birim Bilgileri</h4>
+    <div class="options">
+        <a class="panel-collapse" href="#">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+    <div class="panel-body">
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-midnightblue">
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Numara:</label>
+                                <span class="info-input">1205210063</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Öğrenim Durumu:</label>
+                                <span class="info-input">Normal</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Statu:</label>
+                                <span class="info-input">Devamlı Öğrenci</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Aşama:</label>
+                                <span class="info-input">Ders Aşamasında</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Askerlik Durumu:</label>
+                                <span class="info-input">Belirsiz</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Fakülte Adı:</label>
+                                <span class="info-input">SİYASAL BİLGİLER FAKÜLTESİ</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Birim Adı:</label>
+                                <span class="info-input">SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER, LİSANS PROGRAMI, (ÖRGÜN ÖĞRETİM)</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Geliş Şekli:</label>
+                                <span class="info-input">Standart kayıt (ÖSYM)</span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main"></label>
+                                <span class="info-input"></span>
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label class="label-main">Şube:</label>
+                                <span class="info-input"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div></div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        Lütfen tercih edilen adres ve iletişim bilgilerini işaretleyiniz.
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>İletişim Bilgileri</h4>
+    <div class="options">
+        <a class="panel-collapse" href="#">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+    <div class="panel-body">
+
+<div class="row" style="padding:0 10px;">
+    <a id="" class="btn btn-success btn-sm tooltips pull-right" href="javascript:;" data-toggle="tooltip modal" data-width="8" data-source="/Profil/Ozluk/TelefonEkle" data-title="Telefon Ekle" data-function="CloseModal" title="" data-original-title=" Yeni İletişim Bilgisi eklemek için “Yeni Kayıt” butonuna tıklayınız. Eksik ya da hatalı iletişim bilgilerinin silinmesi ya da güncellenmesi için Fakülteniz Öğrenci İşleri Bürosu ile irtibata geçiniz."><i class="fa fa-plus"><span>&nbsp;&nbsp;Yeni Kayıt</span></i></a>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="k-widget k-grid" id="iletisimGrid" data-role="grid"><table role="grid"><colgroup><col><col><col><col style="width:50px"></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th class="k-header" data-field="IletisimTipi" data-index="0" data-title="İletişim Tipi" scope="col"><span class="k-link">İletişim Tipi</span></th><th class="k-header" data-field="Telefon_Mail" data-index="1" data-title="Değeri" scope="col"><span class="k-link">Değeri</span></th><th class="k-header" data-field="EklemeGuncellemeTarih" data-index="2" data-title="Ekleme/Güncelleme Tarihi" scope="col"><span class="k-link">Ekleme/Güncelleme Tarihi</span></th><th class="k-header" data-field="IletisimID" data-index="3" data-title="Tercih Edilen Mi?" scope="col"><span class="k-link">Tercih Edilen Mi?</span></th></tr></thead><tbody role="rowgroup"><tr data-uid="c13d6bf3-611a-42f1-a5f1-a1705ed89bbf" role="row"><td role="gridcell">Cep</td><td role="gridcell">05076755461</td><td role="gridcell">09.09.2021 00:24</td><td role="gridcell"><input type="checkbox" checked="checked" onchange="updateIletisimTercih(3665414)"></td></tr><tr class="k-alt" data-uid="ab7717a4-f49b-46ee-864c-19978cd91342" role="row"><td role="gridcell">Cep</td><td role="gridcell">05076755461</td><td role="gridcell">11.09.2021 19:22</td><td role="gridcell"><input type="checkbox" checked="checked" onchange="updateIletisimTercih(3711808)"></td></tr><tr data-uid="882af866-9fa2-49e0-830d-2a7f65fbd037" role="row"><td role="gridcell">Cep</td><td role="gridcell">905436061280</td><td role="gridcell">11.10.2021 14:09</td><td role="gridcell"><input type="checkbox" checked="checked" onchange="updateIletisimTercih(3897933)"></td></tr><tr class="k-alt" data-uid="44c41826-5eba-4deb-898b-2f42ed482c86" role="row"><td role="gridcell">Ev</td><td role="gridcell">902165531764</td><td role="gridcell">02.09.2021 14:27</td><td role="gridcell"><input type="checkbox" checked="checked" onchange="updateIletisimTercih(3528640)"></td></tr><tr data-uid="f0ecd104-3380-4df9-81e4-8d50b8c5ec1a" role="row"><td role="gridcell">Email</td><td role="gridcell">dilekakyol_@hotmail.com</td><td role="gridcell">09.09.2021 00:24</td><td role="gridcell"><input type="checkbox" onchange="updateIletisimTercih(3604698)"></td></tr><tr class="k-alt" data-uid="e278c95f-084f-4086-aa6c-e61241424714" role="row"><td role="gridcell">Email</td><td role="gridcell">dilaakyol02@gmail.com</td><td role="gridcell">12.06.2022 23:10</td><td role="gridcell"><input type="checkbox" checked="checked" onchange="updateIletisimTercih(3691927)"></td></tr><tr data-uid="513f588d-5810-4639-a1fb-bca5b9049d92" role="row"><td role="gridcell">Email</td><td role="gridcell">dila.akyol@ogr.iu.edu.tr</td><td role="gridcell">16.01.2023 14:07</td><td role="gridcell"><input type="checkbox" onchange="updateIletisimTercih(4624992)"></td></tr></tbody></table></div><script>
+	jQuery(function(){jQuery("#iletisimGrid").kendoGrid({"columns":[{"title":"İletişim Tipi","headerAttributes":{"data-field":"IletisimTipi","data-title":"İletişim Tipi"},"field":"IletisimTipi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Değeri","headerAttributes":{"data-field":"Telefon_Mail","data-title":"Değeri"},"field":"Telefon_Mail","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Ekleme/Güncelleme Tarihi","headerAttributes":{"data-field":"EklemeGuncellemeTarih","data-title":"Ekleme/Güncelleme Tarihi"},"field":"EklemeGuncellemeTarih","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Tercih Edilen Mi?","headerAttributes":{"data-field":"IletisimID","data-title":"Tercih Edilen Mi?"},"width":"50px","template":"\u003cinput type=\u0027checkbox\u0027 #if(TercihEdilenMi){# checked #}# onchange=\u0027updateIletisimTercih(#=IletisimID#)\u0027 /\u003e","field":"IletisimID","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true}],"scrollable":false,"messages":{"noRecords":"No records available."},"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Profil/Ozluk/GetIletisimBilgileri","data":GetData},"prefix":""},"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"sira":{"type":"number"},"IletisimID":{"type":"number"},"IletisimTipi":{"type":"string"},"EnumIletisimTipi":{"type":"number"},"Telefon_Mail":{"type":"string"},"EklemeGuncellemeTarih":{"type":"string"},"TercihEdilenMi":{"type":"boolean","defaultValue":null}}}}}});});
+</script>
+    </div>
+</div>
+</div></div>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        Lütfen tercih edilen adres ve iletişim bilgilerini işaretleyiniz.
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>Adres Bilgileri</h4>
+    <div class="options">
+        <a class="panel-collapse" href="#">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+    <div class="panel-body">
+
+<div class="row" style="padding:0 10px;">
+    <a id="" class="btn btn-success btn-sm tooltips pull-right" href="javascript:;" data-toggle="tooltip modal" data-width="8" data-source="/Profil/Ozluk/AdresEkle" data-title="Adres Ekle" data-function="CloseModal" data-original-title="" title=""><i class="fa fa-plus"><span>&nbsp;&nbsp;Yeni Kayıt</span></i></a>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="k-widget k-grid" id="adresGrid" data-role="grid"><table role="grid"><colgroup><col><col><col><col><col style="width:50px"></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th class="k-header" data-field="AdresTipi" data-index="0" data-title="Adres Tipi" scope="col"><span class="k-link">Adres Tipi</span></th><th class="k-header" data-field="Adres" data-index="1" data-title="Adres" scope="col"><span class="k-link">Adres</span></th><th class="k-header" data-field="il" data-index="2" data-title="İl" scope="col"><span class="k-link">İl</span></th><th class="k-header" data-field="ilce" data-index="3" data-title="İlçe" scope="col"><span class="k-link">İlçe</span></th><th class="k-header" data-field="ID" data-index="4" data-title="Tercih Edilen Mi?" scope="col"><span class="k-link">Tercih Edilen Mi?</span></th></tr></thead><tbody role="rowgroup"><tr data-uid="6987d951-e160-4ff7-b477-1162f4925063" role="row"><td role="gridcell">İkametgah</td><td role="gridcell">cumhuriyet mah. menteşe sok. no 33. daire 2</td><td role="gridcell"></td><td role="gridcell">ÜSKÜDAR</td><td role="gridcell"><input type="checkbox" checked="checked" onchange="updateAdresTercih(2611403)"></td></tr><tr class="k-alt" data-uid="2b96031e-d767-4391-a267-a7901d0f5285" role="row"><td role="gridcell">Mernis</td><td role="gridcell">ÇİFTLİK MAH. NECİP FAZIL CAD. BinaNo:71 Daire:3 BEYKOZ / İSTANBUL</td><td role="gridcell">İstanbul</td><td role="gridcell">BEYKOZ</td><td role="gridcell"><input type="checkbox" onchange="updateAdresTercih(2653806)"></td></tr></tbody></table></div><script>
+	jQuery(function(){jQuery("#adresGrid").kendoGrid({"columns":[{"title":"Adres Tipi","headerAttributes":{"data-field":"AdresTipi","data-title":"Adres Tipi"},"field":"AdresTipi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Adres","headerAttributes":{"data-field":"Adres","data-title":"Adres"},"field":"Adres","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"İl","headerAttributes":{"data-field":"il","data-title":"İl"},"field":"il","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"İlçe","headerAttributes":{"data-field":"ilce","data-title":"İlçe"},"field":"ilce","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Tercih Edilen Mi?","headerAttributes":{"data-field":"ID","data-title":"Tercih Edilen Mi?"},"width":"50px","template":"\u003cinput type=\u0027checkbox\u0027 #if(TercihEdilenMi){# checked #}# onchange=\u0027updateAdresTercih(#=ID#)\u0027 /\u003e","field":"ID","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true}],"scrollable":false,"messages":{"noRecords":"No records available."},"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Profil/Ozluk/GetAdresBilgileri","data":GetData},"prefix":""},"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"ID":{"type":"number"},"KisiID":{"type":"number"},"AdresTipi":{"type":"string"},"Adres":{"type":"string"},"ilce":{"type":"string"},"il":{"type":"string"},"PostaKodu":{"type":"string"},"TercihEdilenMi":{"type":"boolean","defaultValue":null}}}}}});});
+</script>
+    </div>
+</div>
+</div></div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>Staj Bilgileri</h4>
+    <div class="options">
+        <a class="panel-collapse" href="#">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+    <div class="panel-body">
+
+<div class="panel panel-primary">
+    <div class="panel-body" style="overflow: auto">
+        <div class="k-widget k-grid" id="stajGrid" data-role="grid"><table role="grid"><colgroup><col><col><col><col><col></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th class="k-header" data-field="StajYeri" data-index="0" data-title="Staj Yeri" scope="col"><span class="k-link">Staj Yeri</span></th><th class="k-header" data-field="StajTuru" data-index="1" data-title="Staj Türü" scope="col"><span class="k-link">Staj Türü</span></th><th class="k-header" data-field="GunSayisi" data-index="2" data-title="Gün Sayısı" scope="col"><span class="k-link">Gün Sayısı</span></th><th class="k-header" data-field="BaslamaTarihi" data-index="3" data-title="Başlama Tarihi" scope="col"><span class="k-link">Başlama Tarihi</span></th><th class="k-header" data-field="BitisTarihi" data-index="4" data-title="Bitiş Tarihi" scope="col"><span class="k-link">Bitiş Tarihi</span></th></tr></thead><tbody role="rowgroup"></tbody></table></div><script>
+	jQuery(function(){jQuery("#stajGrid").kendoGrid({"columns":[{"title":"Staj Yeri","headerAttributes":{"data-field":"StajYeri","data-title":"Staj Yeri"},"field":"StajYeri","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Staj Türü","headerAttributes":{"data-field":"StajTuru","data-title":"Staj Türü"},"field":"StajTuru","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Gün Sayısı","headerAttributes":{"data-field":"GunSayisi","data-title":"Gün Sayısı"},"field":"GunSayisi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Başlama Tarihi","headerAttributes":{"data-field":"BaslamaTarihi","data-title":"Başlama Tarihi"},"field":"BaslamaTarihi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Bitiş Tarihi","headerAttributes":{"data-field":"BitisTarihi","data-title":"Bitiş Tarihi"},"field":"BitisTarihi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true}],"scrollable":false,"messages":{"noRecords":"No records available."},"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Profil/Ozluk/GetStajBilgileri"},"prefix":""},"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"EID":{"type":"string"},"StajTuru":{"type":"string"},"StajYeri":{"type":"string"},"StajTuruYab":{"type":"string"},"BaslamaTarihi":{"type":"string"},"BitisTarihi":{"type":"string"},"GunSayisi":{"type":"number"},"BasariDurumu":{"type":"string"},"BasariDurumuYab":{"type":"string"}}}}}});});
+</script>
+    </div>
+</div>
+</div></div>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>Hazırlık Bilgileri</h4>
+    <div class="options">
+        <a class="panel-collapse" href="#">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+    <div class="panel-body">
+
+<div class="panel panel-primary">
+    <div class="panel-body" style="overflow: auto">
+        <h4>Harf Notlar</h4>
+
+        <div class="k-widget k-grid" id="hazirlikSonNotGrid" data-role="grid"><table role="grid"><colgroup><col><col><col><col><col><col><col><col></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th class="k-header" data-field="Yil" data-index="0" data-title="Yıl" scope="col"><span class="k-link">Yıl</span></th><th class="k-header" data-field="EnumDonem" data-index="1" data-title="Dönem" scope="col"><span class="k-link">Dönem</span></th><th class="k-header" data-field="DersKodu" data-index="2" data-title="Ders Kodu" scope="col"><span class="k-link">Ders Kodu</span></th><th class="k-header" data-field="DersAd" data-index="3" data-title="Ders Adı" scope="col"><span class="k-link">Ders Adı</span></th><th class="k-header" data-field="Akts" data-index="4" data-title="Akts" scope="col"><span class="k-link">Akts</span></th><th class="k-header" data-field="Kredi" data-index="5" data-title="Kredi" scope="col"><span class="k-link">Kredi</span></th><th class="k-header" data-field="YuzlukNot" data-index="6" data-title="Yuzluk Not" scope="col"><span class="k-link">Yuzluk Not</span></th><th class="k-header" data-field="HarfNot" data-index="7" data-title="Harf Not" scope="col"><span class="k-link">Harf Not</span></th></tr></thead><tbody role="rowgroup"><tr data-uid="37cbb9a6-5aa6-4596-acc6-89f94477ecc2" role="row"><td role="gridcell">2021</td><td role="gridcell">YILLIK</td><td role="gridcell">1</td><td role="gridcell">HAZIRLIK</td><td role="gridcell">60</td><td role="gridcell">0</td><td role="gridcell">85.94</td><td role="gridcell">G</td></tr></tbody></table></div><script>
+	jQuery(function(){jQuery("#hazirlikSonNotGrid").kendoGrid({"columns":[{"title":"Yıl","headerAttributes":{"data-field":"Yil","data-title":"Yıl"},"field":"Yil","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Dönem","headerAttributes":{"data-field":"EnumDonem","data-title":"Dönem"},"field":"EnumDonem","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Ders Kodu","headerAttributes":{"data-field":"DersKodu","data-title":"Ders Kodu"},"field":"DersKodu","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Ders Adı","headerAttributes":{"data-field":"DersAd","data-title":"Ders Adı"},"field":"DersAd","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Akts","headerAttributes":{"data-field":"Akts","data-title":"Akts"},"field":"Akts","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Kredi","headerAttributes":{"data-field":"Kredi","data-title":"Kredi"},"field":"Kredi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Yuzluk Not","headerAttributes":{"data-field":"YuzlukNot","data-title":"Yuzluk Not"},"field":"YuzlukNot","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Harf Not","headerAttributes":{"data-field":"HarfNot","data-title":"Harf Not"},"field":"HarfNot","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true}],"scrollable":false,"messages":{"noRecords":"No records available."},"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Profil/Ozluk/getirHazirlikSonNot"},"prefix":""},"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"Yil":{"type":"number"},"EnumDonem":{"type":"string"},"DersKodu":{"type":"string"},"DersAd":{"type":"string"},"Akts":{"type":"number"},"Kredi":{"type":"number"},"YuzlukNot":{"type":"string"},"HarfNot":{"type":"string"}}}}}});});
+</script>
+
+        <h4>Muafiyet Sınav Notları</h4>
+
+        <div class="k-widget k-grid" id="hazirlikMuafiyetGrid" data-role="grid"><table role="grid"><colgroup><col><col><col><col><col><col></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th class="k-header" data-field="AkademikYil" data-index="0" data-title="Öğretim Yılı" scope="col"><span class="k-link">Öğretim Yılı</span></th><th class="k-header" data-field="MuafiyetSinavTip" data-index="1" data-title="Sınav Türü" scope="col"><span class="k-link">Sınav Türü</span></th><th class="k-header" data-field="BelgeIleMuafMi" data-index="2" data-title="Sınav Bilgisi" scope="col"><span class="k-link">Sınav Bilgisi</span></th><th class="k-header" data-field="Notu" data-index="3" data-title="Muafiyet Bilgisi" scope="col"><span class="k-link">Muafiyet Bilgisi</span></th><th class="k-header" data-field="SinavaGirdimi" data-index="4" data-title="Sonuç Bilgisi" scope="col"><span class="k-link">Sonuç Bilgisi</span></th><th class="k-header" data-field="Sonuc" data-index="5" data-title="Durumu" scope="col"><span class="k-link">Durumu</span></th></tr></thead><tbody role="rowgroup"><tr data-uid="1684367a-940c-4ef9-ae2a-4ae6912a35a2" role="row"><td role="gridcell">2021</td><td role="gridcell">1.Muafiyet Sınavı</td><td role="gridcell">Hayır</td><td role="gridcell">58</td><td role="gridcell">Evet</td><td role="gridcell">Başarısız</td></tr><tr class="k-alt" data-uid="e135bbd8-ec91-445d-9f9d-d58c832634e4" role="row"><td role="gridcell">2021</td><td role="gridcell">2. Muafiyet Sınavı</td><td role="gridcell">Hayır</td><td role="gridcell">0</td><td role="gridcell">Hayır</td><td role="gridcell">Başarısız</td></tr></tbody></table></div><script>
+	jQuery(function(){jQuery("#hazirlikMuafiyetGrid").kendoGrid({"columns":[{"title":"Öğretim Yılı","headerAttributes":{"data-field":"AkademikYil","data-title":"Öğretim Yılı"},"field":"AkademikYil","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Sınav Türü","headerAttributes":{"data-field":"MuafiyetSinavTip","data-title":"Sınav Türü"},"field":"MuafiyetSinavTip","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Sınav Bilgisi","headerAttributes":{"data-field":"BelgeIleMuafMi","data-title":"Sınav Bilgisi"},"field":"BelgeIleMuafMi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Muafiyet Bilgisi","headerAttributes":{"data-field":"Notu","data-title":"Muafiyet Bilgisi"},"field":"Notu","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Sonuç Bilgisi","headerAttributes":{"data-field":"SinavaGirdimi","data-title":"Sonuç Bilgisi"},"field":"SinavaGirdimi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Durumu","headerAttributes":{"data-field":"Sonuc","data-title":"Durumu"},"field":"Sonuc","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true}],"scrollable":false,"messages":{"noRecords":"No records available."},"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Profil/Ozluk/getirHazirlikMuafiyetNotV2"},"prefix":""},"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"AkademikYil":{"type":"number"},"MuafiyetSinavTip":{"type":"string"},"BelgeIleMuafMi":{"type":"string"},"Notu":{"type":"number"},"SinavaGirdimi":{"type":"string"},"Sonuc":{"type":"string"}}}}}});});
+</script>
+
+        <h4>Hazırlık Notları</h4>
+        <div class="k-widget k-grid" id="hazirlikGrid" data-role="grid"><table role="grid"><colgroup><col><col><col><col><col><col><col><col></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th class="k-header" data-field="OgretimYili" data-index="0" data-title="Öğretim Yılı" scope="col"><span class="k-link">Öğretim Yılı</span></th><th class="k-header" data-field="EnumSinavTuru" data-index="1" data-title="Sınav Türü" scope="col"><span class="k-link">Sınav Türü</span></th><th class="k-header" data-field="EnumSinavBilgisi" data-index="2" data-title="Sınav Bilgisi" scope="col"><span class="k-link">Sınav Bilgisi</span></th><th class="k-header" data-field="MuafiyetMi" data-index="3" data-title="Muafiyet Bilgisi" scope="col"><span class="k-link">Muafiyet Bilgisi</span></th><th class="k-header" data-field="EnumSonucBilgisi" data-index="4" data-title="Sonuç Bilgisi" scope="col"><span class="k-link">Sonuç Bilgisi</span></th><th class="k-header" data-field="EnumBasariDurumu" data-index="5" data-title="Durumu" scope="col"><span class="k-link">Durumu</span></th><th class="k-header" data-field="SinavNotu" data-index="6" data-title="Başarı Notu" scope="col"><span class="k-link">Başarı Notu</span></th><th class="k-header" data-field="EnumHarfNotu" data-index="7" data-title="Harf Notu" scope="col"><span class="k-link">Harf Notu</span></th></tr></thead><tbody role="rowgroup"></tbody></table></div><script>
+	jQuery(function(){jQuery("#hazirlikGrid").kendoGrid({"columns":[{"title":"Öğretim Yılı","headerAttributes":{"data-field":"OgretimYili","data-title":"Öğretim Yılı"},"field":"OgretimYili","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Sınav Türü","headerAttributes":{"data-field":"EnumSinavTuru","data-title":"Sınav Türü"},"field":"EnumSinavTuru","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Sınav Bilgisi","headerAttributes":{"data-field":"EnumSinavBilgisi","data-title":"Sınav Bilgisi"},"field":"EnumSinavBilgisi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Muafiyet Bilgisi","headerAttributes":{"data-field":"MuafiyetMi","data-title":"Muafiyet Bilgisi"},"field":"MuafiyetMi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Sonuç Bilgisi","headerAttributes":{"data-field":"EnumSonucBilgisi","data-title":"Sonuç Bilgisi"},"field":"EnumSonucBilgisi","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Durumu","headerAttributes":{"data-field":"EnumBasariDurumu","data-title":"Durumu"},"field":"EnumBasariDurumu","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Başarı Notu","headerAttributes":{"data-field":"SinavNotu","data-title":"Başarı Notu"},"field":"SinavNotu","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true},{"title":"Harf Notu","headerAttributes":{"data-field":"EnumHarfNotu","data-title":"Harf Notu"},"field":"EnumHarfNotu","filterable":{"messages":{"info":"bu ile bu arasındaki değerleri göster","isTrue":"Doğru ","isFalse":"FALSE","filter":"Filtre","clear":"Temizle","and":"Ve","or":"ya da","selectValue":"Değer Seçiniziniz","operator":"Operatör(işletmen)","value":"Değer","cancel":"İptal","search":"Arama"},"operators":{"string":{"eq":"Eşittir","neq":"Eşit değildir","startswith":"İle başlar","endswith":"İle biter","contains":"İçeriyor","doesnotcontain":"İçermiyor","isnull":"Is null","isnotnull":"Is not null","isempty":"Is empty","isnotempty":"Is not empty"},"number":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Daha büyük veya eşittir","gt":"Büyüktür","lte":"Daha küçük veya eşit","lt":"Daha küçük","isnull":"Is null","isnotnull":"Is not null"},"date":{"eq":"Eşittir","neq":"Eşit değildir","gte":"Sonra ya da eşit","gt":"Sonra","lte":"Önce ya da eşit","lt":"Önce","isnull":"Is null","isnotnull":"Is not null"},"enums":{"eq":"Eşittir","neq":"Eşit değildir","isnull":"Is null","isnotnull":"Is not null"}}},"encoded":true}],"scrollable":false,"messages":{"noRecords":"No records available."},"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Profil/Ozluk/GetHazirlikBilgileri"},"prefix":""},"serverPaging":true,"serverSorting":true,"serverFiltering":true,"serverGrouping":true,"serverAggregates":true,"filter":[],"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"fields":{"OgretimYili":{"type":"number"},"EnumSinavTuru":{"type":"number"},"EnumSinavBilgisi":{"type":"number"},"MuafiyetMi":{"type":"boolean"},"EnumSonucBilgisi":{"type":"number"},"EnumBasariDurumu":{"type":"number"},"SinavNotu":{"type":"number"},"EnumHarfNotu":{"type":"number"}}}}}});});
+</script>
+    </div>
+</div>
+</div></div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>Parola Güncelleme</h4>
+    <div class="options">
+        <a class="panel-collapse" href="#">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+    <div class="panel-body">
+
+<div class="panel panel-sky col-md-12">
+    <div class="panel-body">
+        <div class="row">
+            <label class="col-md-2 control-label">Parola:</label>
+            <div class="col-md-4">
+                <span class="info-input">
+                    <input id="password" name="password" type="password">
+                </span>
+
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-md-2 control-label">Parola Tekrarı:</label>
+            <div class="col-md-4">
+                <span class="info-input">
+                    <input id="passwordRepeat" name="passwordRepeat" type="password">
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 control-label"></div>
+            <div class="col-md-8">
+                <a id="btnParolaKaydet" class="btn btn-success" href="#"><span>Güncelle</span></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div></div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    <h4>Lise Bilgisi Güncelleme</h4>
+    <div class="options">
+        <a class="panel-collapse" href="#">
+            <i class="fa fa-chevron-down"></i>
+        </a>
+    </div>
+</div>
+    <div class="panel-body">
+
+<script>
+$(document).ready(function(){
+	$('.validate-form').parsley({
+        successClass: 'has-success',
+        errorClass: 'has-error',
+        errors: {
+            classHandler: function(el) {
+                return $(el).closest('.form-group');
+            },
+            errorsWrapper: '<ul class=\"help-block list-unstyled\"></ul>',
+            errorElem: '<li></li>'
+        }
+    });
+});
+</script>
+
+<form action="/Home/EgitimBilgileri" method="post" class="form-horizontal validate-form  " style="" data-ajaxcallback="CreateCallBackAjaxEgitimBilgileri">
+<div class="panel panel-primary">
+
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+    <label class="col-sm-3 control-label">Lise Eğitim Dili</label>
+    <div class="col-sm-9">
+        <script>
+
+    $(document).ready(function () {
+        $("select").each(function (index) {
+            var multiple = $(this).attr('multiple');
+            if (multiple == "multiple") {
+                $(this).multiselect({
+                    includeSelectAllOption: true,
+                    enableFiltering: true
+                });
+            } else {
+                $(this).select2();
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+    //@oguzhan: BACKUP
+    //$(document).ready(function () {
+    //    $("select").each(function (index) {
+    //        var multiple = $(this).attr('multiple');
+    //        if (multiple == "multiple") {
+    //            console.log('_select.html:6');
+    //            $(this).multiSelect({
+    //                selectableHeader: "<input type='text' class='form-control' style='margin-bottom: 10px;'  autocomplete='off' placeholder='Filtrele...'>",
+    //                selectionHeader: "<input type='text' class='form-control' style='margin-bottom: 10px;' autocomplete='off' placeholder='Filtrele...'>",
+    //                afterInit: function(ms){
+    //                    var that = this,
+    //                        $selectableSearch = that.$selectableUl.prev(),
+    //                        $selectionSearch = that.$selectionUl.prev(),
+    //                        selectableSearchString = '#'+that.$container.attr('id')+' .ms-elem-selectable:not(.ms-selected)',
+    //                        selectionSearchString = '#'+that.$container.attr('id')+' .ms-elem-selection.ms-selected';
+
+    //                    that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+    //                    .on('keydown', function(e){
+    //                        if (e.which === 40){
+    //                            that.$selectableUl.focus();
+    //                            return false;
+    //                        }
+    //                    });
+
+    //                    that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+    //                    .on('keydown', function(e){
+    //                        if (e.which == 40){
+    //                            that.$selectionUl.focus();
+    //                            return false;
+    //                        }
+    //                    });
+    //                },
+    //                afterSelect: function(){
+    //                    this.qs1.cache();
+    //                    this.qs2.cache();
+    //                },
+    //                afterDeselect: function(){
+    //                    this.qs1.cache();
+    //                    this.qs2.cache();
+    //                }
+    //            });
+    //        } else {
+    //            $(this).select2();
+    //        }
+    //    });
+    //});
+</script>
+<div class="select2-container" id="s2id_ddlLiseDili" style="width:100%; "><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">Seçiniz..</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select class="8726f784ff6025a66ae4db667b92a4bc select2-offscreen" id="ddlLiseDili" data-bind="" style="width:100%; " name="EnumLiseDili" tabindex="-1"><option value="" selected="selected">Seçiniz..</option><option value="2">Diğer</option><option value="1">Türkçe</option></select>
+    </div>
+    <div class="col-sm-0"><p class="help-block"></p></div>
+
+
+</div>
+            </div>
+            <div class="col-md-8">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row pull-right">
+                <a class="btn-success btn" id="btnEgitimBilgileri" onclick="avantFormSubmit($(this), true)">Kaydet</a>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+</div></div>
+<script>
+
+    function CreateCallBackAjaxEgitimBilgileri(data) {
+        if (data.IsSuccess) {
+            toastr.success("Başarılı ile kaydedildi");
+        }
+        else
+            toastr.error("Başarısız oldu.");
+    }
+
+    function GetData() {
+        return {
+            kisiId: '1803544'
+
+        };
+    }
+
+
+    function CloseModal() {
+
+    }
+
+    function updateAdresTercih(ID) {
+        $.ajax({
+            type: "POST",
+            url: "/Ozluk/adresTercihDegistir",
+            data: { ID: ID },
+            dataType: 'json',
+            success: function (messsage) {
+                $('#adresGrid').data('kendoGrid').dataSource.read();
+                $('#adresGrid').data('kendoGrid').refresh();
+            },
+            error: function (message) {
+                $('#adresGrid').data('kendoGrid').dataSource.read();
+                $('#adresGrid').data('kendoGrid').refresh();
+            }
+        });
+    }
+
+    function updateIletisimTercih(ID) {
+        $.ajax({
+            type: "POST",
+            url: "/Ozluk/updateIletisimTercih",
+            data: { ID: ID },
+            dataType: 'json',
+            success: function (messsage) {
+                $('#iletisimGrid').data('kendoGrid').dataSource.read();
+                $('#iletisimGrid').data('kendoGrid').refresh();
+            },
+            error: function (message) {
+                $('#iletisimGrid').data('kendoGrid').dataSource.read();
+                $('#iletisimGrid').data('kendoGrid').refresh();
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        GetData();
+        $("#btnChangeFoto").click(function () {
+            $("#uploadFoto").modal('show');
+        });
+
+        $('#uploadFoto').on('hidden.bs.modal', function () {
+            var timeStamp = (new Date()).getTime();
+            $("img.profileImage").each(function () {
+                $(this).attr("src", qs_update($(this).attr("src"), "ts", timeStamp));
+            });
+        });
+    });
+
+    $("#btnParolaKaydet").click(
+
+    function () {
+        $.ajax({
+            type: "POST",
+            url: "/Ozluk/parolaDegistir",
+            data: { parola: $("#password").val(), parolaTekrari: $("#passwordRepeat").val() },
+            dataType: 'json',
+            success: function (messsage) {
+                uys_show_notifyv2(messsage);
+            },
+            error: function (message) {
+                uys_show_notify('Hata', 'error', message);
+            }
+        });
+
+    });
+
+    $("#btnYokYdTalepKaydet").click(
+
+        function () {
+            $.ajax({
+                type: "POST",
+                url: "/Ozluk/kaydetYdTalep",
+                data: { EnumYOKYabanciDilMuafiyetSinaviIstekTipi: $("#yokYDMuafiyetIstek").val()},
+                dataType: 'json',
+                success: function (data) {
+                    if (data.IsSuccess)
+                        toastr.success(data.Message);
+                     else
+                        toastr.error(data.Message);
+                },
+                error: function (message) {
+                    uys_show_notify('Hata', 'error', message);
+                }
+            });
+
+        });
+
+    function qs_update(uri, key, value) {
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        if (uri.match(re)) {
+            return uri.replace(re, '$1' + key + "=" + value + '$2');
+        }
+        else {
+            return uri + separator + key + "=" + value;
+        }
+    }
+
+    function Yoo(data) {
+        console.log('--------------------- Call Back');
+        alert('yo!');
+        uys_show_notifyv2(data);
+    }
+
+    function PostFotograf() {
+        var photo;
+        var data = new FormData();
+        var files = $("#file").get(0).files;
+        if (files.length > 0) {
+            data.append("HelpSectionImages", files[0]);
+        }
+        $.ajax({
+            url: "/Ogrenci/Profil/UpdateFotograf",
+            type: "POST",
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function (response) {
+                location.reload();
+                toastr.success("Fotoğraf, başarı ile kaydedilmiştir.");
+
+            },
+            error: function (er) {
+                toastr.error("Fotoğraf kaydedilirken bir hata ile karşılaşıldı.");
+            }
+
+        });
+    }
+
+    function qs_update(uri, key, value) {
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        if (uri.match(re)) {
+            return uri.replace(re, '$1' + key + "=" + value + '$2');
+        }
+        else {
+            return uri + separator + key + "=" + value;
+        }
+    }
+
+    $(document).ready(function () {
+        $("#btnChangeFoto").click(function () {
+            $("#uploadFoto").modal('show');
+        });
+
+        $('#uploadFoto').on('hidden.bs.modal', function () {
+            var timeStamp = (new Date()).getTime();
+            $("img.profileImage").each(function () {
+                $(this).attr("src", qs_update($(this).attr("src"), "ts", timeStamp));
+            });
+        });
+    });
+
+</script>
+
+                        <!-- Sayfa İçeriğinin Bit -->
+                    </div> <!-- container -->
+                </div> <!--wrap -->
+            </div> <!-- page-content -->
+            <!--Model Box Başla-->
+            <div id="GlobalModalBox" class="modal fade">
+                <div class="modal-dialog" style="width: auto !important">
+                    <div class="modal-content col-sm-8 col-sm-offset-2 col-xs-12">
+                        <div class="modal-header">
+                            <button type="button" class="close GlobalModalBoxClose" data-dismiss="modal" aria-hidden="true" style="font-size: 36px; color:red;">×</button>
+                            <h4 class="modal-title" id="GlobalModalBoxTitle">Başlık</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="GlobalModalBoxBody">One fine body…</p>
+                        </div>
+                        <div class="modal-footer" id="GlobalModalBoxFooterYesNo">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="GlobalModalBoxYes">Evet</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal" id="GlobalModalBoxNo">Hayır</button>
+                        </div>
+                        
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!--Model Box Bit-->
+            <!--Model Box Başla-->
+            <div id="EgitimVideoModalBox" class="modal fade">
+                <div class="modal-dialog" style="width: auto !important">
+                    <div class="modal-content col-sm-8 col-sm-offset-2 col-xs-12">
+                        <div class="modal-header">
+                            <button type="button" class="close GlobalModalBoxClose" data-dismiss="modal" aria-hidden="true" style="font-size: 36px; color:red;">×</button>
+                            <h4 class="modal-title">AFET FARKINDALIK EĞİTİMİ</h4>
+                        </div>
+                        <div class="modal-body" style="text-align:justify;">
+                            <p>
+                                Afetle mücadelenin en önemli 
+aşamalarından olan “Afet Farkındalık Eğitimi” afet öncesinde yapılarak 
+vatandaşlarımızı risk azaltma, gönüllülük çalışmalarına katılma, 
+risklerden kaçınma, birey ve aile afet planlarının oluşabilmesi, olası 
+afetlerde panik ve yığılmaların önüne geçilebilmesi, afet zararların 
+azaltılmasına yönelik bir eğitimdir.
+                            </p>
+                            <p>
+                                Unutmayalım ki en son birey hazır olana kadar, afetlere hazır olunmaz.
+                            </p>
+                            <p>
+                                Afet riskine karşı hep birlikte.
+                            </p>
+                            <p>
+                                Not: Afet Farkındalık Eğitim videosunu 
+izleyen öğrencilerimiz özel hazırladığımız katılım sertifikasını <a href="https://obs.istanbul.edu.tr/Belge/BelgeTalep" target="_self">belge talep</a> sayfasından veya videonun bulunduğu sayfadan alabilirler.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            
+                            <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" onclick="EgitimVideoIzle()">İzle</button>
+                        </div>
+                        
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!--Model Box Bit-->
+            <!--Loading Box-->
+            <!--Loading Box-->
+
+            <footer role="contentinfo">
+                <div class="clearfix">
+                    <ul class="list-unstyled list-inline">
+                        <li>İSTANBUL ÜNİVERSİTESİ | BİLGİ İŞLEM DAİRE BAŞKANLIĞI © 2024 |</li>
+                        <li>Version: 1.0.0.0 - Dated: 22.2.2024 14:40:39</li>
+
+                        <li><b>Oturum Bitiş Süresi: </b> <span id="timer">118:37</span> </li>
+
+                        <button class="pull-right btn btn-inverse-alt btn-xs hidden-print" id="back-to-top"><i class="fa fa-arrow-up"></i></button>
+
+                        <li class="pull-right ">
+                            <img src="Ozluk_dosyalar/chrome.png" class="pull-left">&nbsp;&nbsp; En iyi deneyim için Google Chrome'u öneriyoruz.&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+
+            <div class="modal modal-wide fade" id="modalTimeOut" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">Oturum Bitiş Süresi</h4>
+
+                        </div>
+                        <div class="modal-body form-horizontal">
+                            <h2>Devam etmek istiyor musunuz?</h2>
+                            <b>Oturum Bitiş Süresi: </b> <span id="timerModal">118:37</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary pull-left" onclick="ResetTimetout()">Devam Et</button>
+                            <button type="button" class="btn btn-danger pull-right" onclick="$('#modalTimeOut').modal('hide')">Kapat</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        </div> <!-- page-container -->
+        <!-- IP: 161.9.143.110-->
+        <script src="Ozluk_dosyalar/plugin-before"></script>
+
+
+        <!-- Plugin javascript dosyaları Başla -->
+        <!-- assets/plugins/ klasöründeki eklentilerin javascript dosyaları burada yüklenecek -->
+        
+        <script src="Ozluk_dosyalar/OBSgeneratedJS.js"></script>
+        <!-- Plugin javascript dosyaları Bit -->
+        <script src="Ozluk_dosyalar/plugin-after"></script><style>.placeholdr{color:#AAA;}</style>
+        <style>
+            .placeholdr {
+                color: #AAA;
+            }
+        </style>
+        <script src="Ozluk_dosyalar/master_core.js"></script>
+        <script src="Ozluk_dosyalar/showLoading.js"></script>
+
+        <!-- KENDO JS AND CSS -->
+        <link href="Ozluk_dosyalar/kendo.common.min.css" rel="stylesheet" type="text/css">
+        <link href="Ozluk_dosyalar/kendo.default.min.css" rel="stylesheet" type="text/css">
+        <link href="Ozluk_dosyalar/kendo.dataviz.min.css" rel="stylesheet" type="text/css">
+        <link href="Ozluk_dosyalar/kendo.dataviz.bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="Ozluk_dosyalar/kendo.all.min.js"></script>
+        <script src="Ozluk_dosyalar/kendo.aspnetmvc.min.js"></script>
+        <script src="Ozluk_dosyalar/kendo.culture.tr-TR.min.js"></script>
+
+
+        <script>
+            kendo.culture("tr-TR");
+        </script>
+
+        <script type="text/javascript" src="Ozluk_dosyalar/jquery.multi-select.min.js"></script>
+
+        <script src="Ozluk_dosyalar/bootstrap-multiselect.js"></script>
+        <script type="text/javascript">
+        var timerActive = true;
+        function startTimer() {
+            var time = '7200';
+            var start = Date.now(), diff, minutes, seconds;
+
+            function timer() {
+                if (!timerActive) {
+                    start = Date.now(), diff, minutes, seconds;
+                    time = '7200';
+                    timerActive = true;
+                }
+
+                diff = time - (((Date.now() - start) / 1000) | 0);
+                minutes = (diff / 60) | 0;
+                seconds = (diff % 60) | 0;
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                document.getElementById('timer').innerHTML = minutes + ":" + seconds;
+                document.getElementById('timerModal').innerHTML = minutes + ":" + seconds;
+
+                if (minutes == '01' & seconds == '01')
+                    $('#modalTimeOut').modal('show');
+
+                if (minutes == '00' & seconds == '01') {
+                    $('#modalTimeOut').modal('hide');
+                    window.location.href = '/Home/Logout';
+                }
+
+
+                if (diff <= 0) {
+                    start = Date.now() + 1000;
+                }
+            };
+            // we don't want to wait a full second before the timer starts
+            timer();
+            setInterval(timer, 1000);
+
+        }
+
+        function ResetTimetout() {
+            $.ajax({
+                type: "POST",
+                url: "/Data/ResetSessionTimeout",
+                datatype: "json",
+                success: successFunction
+            });
+        }
+        function successFunction(data) {
+            timerActive = false;
+            $('#modalTimeOut').modal('hide');
+        }
+        </script>
+
+        <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.pnotify.defaults.delay = 3000;
+
+            if (window.location.href.indexOf('testogr') > -1)
+                $(".navbar-inverse").css("background-color", "green");
+
+            $.datepicker.setDefaults($.datepicker.regional['tr-TR']);
+            $.datepicker.setDefaults({ dateFormat: 'dd.mm.yy' });
+
+
+            var universityId = '1';
+
+            $("a.navbar-brand").css("background", 'url("/Content/img/logo_1.png")  no-repeat center center');
+            $("a.navbar-brand").css("background-size", 'auto 20px');
+
+                toastr.options = {
+                    "closeButton": false,
+                "debug": false,
+                "newestOnTop": true,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "4000",
+                "extendedTimeOut": "4000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut",
+                "tapToDismiss": true,
+            }
+
+
+            });
+
+        startTimer();
+
+        getLocation = function (href) {
+            var l = document.createElement("a");
+            l.href = href;
+            return l;
+        };
+        //var l = getLocation(window.location.href);
+
+        //if (l.pathname == '/' || l.pathname == '/Home/Index') {
+        //    $.ajax({
+        //        type: "Get",
+        //        url: '/Home/GetEgitimVideoHatirlatma?ID=1',
+        //        success: function (messsage) {
+        //            console.log(messsage);
+        //            if (messsage.Object) {
+        //                $('#EgitimVideoModalBox').modal();
+        //            }
+        //        },
+        //        error: function () {
+        //        },
+        //        global: false,
+        //    });
+        //}
+
+        //function EgitimVideoSonraHatirlat(durum) {
+        //    $.ajax({
+        //        type: "Get",
+        //        url: '/Home/SetEgitimVideoHatirlatma?ID=1&Hatirlatma=' + durum,
+        //        success: function (messsage) {
+        //            console.log(messsage);
+        //        },
+        //        error: function () {
+        //        },
+        //        global: false,
+        //    });
+        //}
+
+        function EgitimVideoIzle() {
+            window.location.replace("/EEgitim/EEgitim/Index/1");
+        }
+        </script>
+
+
+            <script>
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-65751649-5', 'auto');
+                ga('send', 'pageview');
+            </script>
+
+        
+    
+
+</body></html>
